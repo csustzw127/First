@@ -79,6 +79,11 @@ public class MainActivity extends Activity {
 		return ;
 	}
 
+        private void showMessage(String text,String info){
+             new AlertDialog.Builder(MainActivity.this).setTitle("提示")//设置对话框标题  
+           .setMessage(text+info)//设置显示的内容                
+        }
+
 	protected void delOne() {
 		if (txtId.getText().toString().trim().length() == 0) {
 			showMessage("error", "请输入要删除的学号");
